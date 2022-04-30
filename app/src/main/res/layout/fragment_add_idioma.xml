@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.add.AddIdiomaFragment"
+    android:background="@color/white"
+    android:backgroundTint="#FFF3DC"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ingresar datos de Idioma"
+        android:layout_margin="20dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        />
+
+       <EditText
+        android:id="@+id/etNombre"
+           android:layout_width="350dp"
+           android:layout_height="60dp"
+           android:inputType="textPersonName"
+           android:layout_gravity="center"
+           android:layout_marginTop="20dp"
+           android:hint="Idioma"
+           android:autofillHints=""
+           android:background="@drawable/custom_input"
+           android:paddingStart="12dp"
+           android:paddingEnd="12dp"
+           android:textColor="@color/black"
+           android:textColorHint="#68604A"/>
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <Button
+        android:id="@+id/btn_new"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center|bottom"
+        android:backgroundTint="#4C4533"
+        android:text="Agregar"
+        android:textColor="#CDC7B4"/>
+
+</LinearLayout>
+

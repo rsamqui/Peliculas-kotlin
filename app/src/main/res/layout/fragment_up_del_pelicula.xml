@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.update_delete.UpDelPeliculaFragment">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:backgroundTint="#FFF3DC"
+        android:padding="16dp"
+        tools:ignore="ScrollViewSize">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Modificar datos de Pelicula"
+            android:layout_margin="20dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:typeface="monospace"
+            />
+
+        <EditText
+            android:id="@+id/etId"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:inputType="textPersonName"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:hint="ID"
+            android:autofillHints=""
+            android:background="@drawable/custom_input"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="#68604A"
+            android:editable="false" />
+
+        <EditText
+            android:id="@+id/etTitulo"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:inputType="textPersonName"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:hint="Título"
+            android:autofillHints=""
+            android:background="@drawable/custom_input"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="#68604A"/>
+
+        <EditText
+            android:id="@+id/etSinopsis"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:inputType="textMultiLine"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:hint="Sinopsis"
+            android:lines="5"
+            android:autofillHints=""
+            android:background="@drawable/custom_input"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="#68604A" />
+
+        <EditText
+            android:id="@+id/etDuracion"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:inputType="textPersonName"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:hint="Duracion"
+            android:autofillHints=""
+            android:background="@drawable/custom_input"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="#68604A"/>
+
+        <EditText
+            android:id="@+id/etTipoMetraje"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:inputType="textPersonName"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:hint="Tipometraje"
+            android:autofillHints=""
+            android:background="@drawable/custom_input"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="#68604A"/>
+
+
+        <Spinner
+            android:id="@+id/spClasificacion"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:background="@drawable/custom_input"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            />
+
+        <Spinner
+            android:id="@+id/spNacionalidad"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:background="@drawable/custom_input"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_gravity="start"
+                android:backgroundTint="#4C4533"
+                android:text="Modificar"
+                android:textColor="#CDC7B4"/>
+
+            <Space
+                android:layout_width="78dp"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_gravity="start"
+                android:backgroundTint="#4C4533"
+                android:text="Borrar"
+                android:textColor="#CDC7B4"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

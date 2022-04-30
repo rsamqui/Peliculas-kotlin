@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home">
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="uca.ni.edu.peliculas.fragment.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_clasif"
+        android:name="uca.ni.edu.peliculas.fragment.list.ClasificacionFragment"
+        android:label="@string/clasificacion"
+        tools:layout="@layout/fragment_clasificacion" >
+        <action
+            android:id="@+id/clasificacion_to_addC"
+            app:destination="@id/addClasificacionFragment2" />
+        <action
+            android:id="@+id/clasificacion_to_updel"
+            app:destination="@id/upDelClasificacionFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_idioma"
+        android:name="uca.ni.edu.peliculas.fragment.list.IdiomaFragment"
+        android:label="@string/idioma"
+        tools:layout="@layout/fragment_idioma" >
+        <action
+            android:id="@+id/idioma_to_addI"
+            app:destination="@id/addIdiomaFragment2" />
+        <action
+            android:id="@+id/idioma_to_updel"
+            app:destination="@id/upDelIdiomaFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_nacionalidad"
+        android:name="uca.ni.edu.peliculas.fragment.list.NacionalidadFragment"
+        android:label="@string/nacionalidad"
+        tools:layout="@layout/fragment_nacionalidad" >
+        <action
+            android:id="@+id/nacionalidad_to_addN"
+            app:destination="@id/addNacionalidadFragment2" />
+        <action
+            android:id="@+id/nacionalidad_to_updel"
+            app:destination="@id/upDelNacionalidadFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_genero"
+        android:name="uca.ni.edu.peliculas.fragment.list.GeneroFragment"
+        android:label="@string/genero"
+        tools:layout="@layout/fragment_genero" >
+        <action
+            android:id="@+id/genero_to_addG"
+            app:destination="@id/addGeneroFragment2" />
+        <action
+            android:id="@+id/genero_to_updel"
+            app:destination="@id/upDelGeneroFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_pelicula"
+        android:name="uca.ni.edu.peliculas.fragment.list.PeliculaFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_pelicula" >
+        <action
+            android:id="@+id/pelicula_toAddP"
+            app:destination="@id/addPeliculaFragment2" />
+        <action
+            android:id="@+id/pelicula_to_updel"
+            app:destination="@id/upDelPeliculaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addClasificacionFragment2"
+        android:name="uca.ni.edu.peliculas.fragment.add.AddClasificacionFragment"
+        android:label="@string/clasificacion"
+        tools:layout="@layout/fragment_add_clasificacion" >
+        <action
+            android:id="@+id/addC_to_clasificacion"
+            app:destination="@id/nav_clasif" />
+    </fragment>
+    <fragment
+        android:id="@+id/upDelClasificacionFragment2"
+        android:name="uca.ni.edu.peliculas.fragment.update_delete.UpDelClasificacionFragment"
+        android:label="@string/clasificacion"
+        tools:layout="@layout/fragment_up_del_clasificacion" >
+        <action
+            android:id="@+id/action_upDelClasificacionFragment_to_clasificacionFragment"
+            app:destination="@id/nav_clasif" />
+        <argument
+            android:name="currentClasif"
+            app:argType="uca.ni.edu.peliculas.bd.entidades.tables.Clasificacion" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPeliculaFragment2"
+        android:name="uca.ni.edu.peliculas.fragment.add.AddPeliculaFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_add_pelicula" >
+        <action
+            android:id="@+id/addP_toPelicula"
+            app:destination="@id/nav_pelicula" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNacionalidadFragment2"
+        android:name="uca.ni.edu.peliculas.fragment.add.AddNacionalidadFragment"
+        android:label="@string/nacionalidad"
+        tools:layout="@layout/fragment_add_nacionalidad" >
+        <action
+            android:id="@+id/addN_to_nacionalidad"
+            app:destination="@id/nav_nacionalidad" />
+    </fragment>
+    <fragment
+        android:id="@+id/upDelNacionalidadFragment2"
+        android:name="uca.ni.edu.peliculas.fragment.update_delete.UpDelNacionalidadFragment"
+        android:label="@string/nacionalidad"
+        tools:layout="@layout/fragment_up_del_nacionalidad" >
+        <action
+            android:id="@+id/updel_to_nacionalidad"
+            app:destination="@id/nav_nacionalidad" />
+        <argument
+            android:name="currentNacionalidad"
+            app:argType="uca.ni.edu.peliculas.bd.entidades.tables.Nacionalidad" />
+    </fragment>
+    <fragment
+        android:id="@+id/addIdiomaFragment2"
+        android:name="uca.ni.edu.peliculas.fragment.add.AddIdiomaFragment"
+        android:label="@string/idioma"
+        tools:layout="@layout/fragment_add_idioma" >
+        <action
+            android:id="@+id/addI_to_idioma"
+            app:destination="@id/nav_idioma" />
+    </fragment>
+    <fragment
+        android:id="@+id/upDelIdiomaFragment2"
+        android:name="uca.ni.edu.peliculas.fragment.update_delete.UpDelIdiomaFragment"
+        android:label="@string/idioma"
+        tools:layout="@layout/fragment_up_del_idioma" >
+        <action
+            android:id="@+id/updel_to_idioma"
+            app:destination="@id/nav_idioma" />
+        <argument
+            android:name="currentIdioma"
+            app:argType="uca.ni.edu.peliculas.bd.entidades.tables.Idioma" />
+    </fragment>
+    <fragment
+        android:id="@+id/addGeneroFragment2"
+        android:name="uca.ni.edu.peliculas.fragment.add.AddGeneroFragment"
+        android:label="@string/genero"
+        tools:layout="@layout/fragment_add_genero" >
+        <action
+            android:id="@+id/addG_to_Genero"
+            app:destination="@id/nav_genero" />
+    </fragment>
+    <fragment
+        android:id="@+id/upDelGeneroFragment2"
+        android:name="uca.ni.edu.peliculas.fragment.update_delete.UpDelGeneroFragment"
+        android:label="@string/genero"
+        tools:layout="@layout/fragment_up_del_genero" >
+        <action
+            android:id="@+id/updel_to_genero"
+            app:destination="@id/nav_genero" />
+        <argument
+            android:name="currentGenero"
+            app:argType="uca.ni.edu.peliculas.bd.entidades.tables.Genero" />
+    </fragment>
+    <fragment
+        android:id="@+id/upDelPeliculaFragment"
+        android:name="uca.ni.edu.peliculas.fragment.update_delete.UpDelPeliculaFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_up_del_pelicula" >
+        <action
+            android:id="@+id/updel_to_pelicula"
+            app:destination="@id/nav_pelicula" />
+        <argument
+            android:name="currentPelicula"
+            app:argType="uca.ni.edu.peliculas.bd.entidades.view.vw_Pelicula" />
+    </fragment>
+</navigation>
